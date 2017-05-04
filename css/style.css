@@ -7,6 +7,7 @@ html, body {
 
     overflow: hidden;
 }
+
 /* HEADER */
 header {
   padding: 0;
@@ -18,4 +19,17 @@ h1 {
   }
 #nav-mobile li a {
   text-transform: capitalize;
+}
+
+
+/* FOOTER */
+
+footer {
+  position:fixed;
+  width: 100%;
+  padding: 0;
+  bottom: 0;
+}
+.page-footer {
+  padding-top: 0;
 }
