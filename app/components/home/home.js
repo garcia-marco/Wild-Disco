@@ -15,9 +15,9 @@ function Home(Artist, LastArtistReleases, Label) {
     let labels = [];
     let releases = [];
 
-    angular.forEach(artistsId, function (v, k) {
+    angular.forEach(artistsId, function (Ids) {
         let art = {};
-        art = Artist.get({ id: v });
+        art = Artist.get({ id: Ids });
         art.$promise.then(function (data) {
             artists.push(data);
             let rel = {};

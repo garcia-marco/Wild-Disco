@@ -1,1 +1,9 @@
-<div>{{$ctrl.artist}}</div>
+<div class="row inLine">
+    <div class="contain-me">
+        <h2>{{$currentArtist.name}}</h2>
+            <div class="purCent">
+                <img class="responsive-img" ng-src="{{ $currentArtist.images[0].resource_url }}">
+            </div>
+        <h5>Derniers Morceaux</h5>
+    </div>
+</div>

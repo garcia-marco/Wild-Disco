@@ -1,14 +1,16 @@
 "use strict";
 
 angular.module("app")
-
     .component("artist", {
         templateUrl: "app/components/artist/artist.html",
-        controller: Artist
+        controller: ArtistPage
     })
 
-;
 
-function Artist() {
-    this.artist = "artist here";
+function ArtistPage(Artist, $stateParams) {
+
+    let currentArt = $stateParams.id;
+    this.currentArtist = Artist.get({id: currentArt});
+    console.log(this.currentArtist)
+    
 }
