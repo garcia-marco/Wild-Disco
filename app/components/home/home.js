@@ -10,5 +10,5 @@ angular.module("app")
 ;
 
 function home() {
-    this.home = "home here";
+    this.home = "Home";
 }

@@ -4,6 +4,7 @@ angular.module("app", [
     // les dépendances externes
     "ui.router", "ngResource"
 ])
+    .controller("test", resources)
 
     .config(function ($stateProvider, $urlRouterProvider) {
         var states = [
@@ -21,7 +22,7 @@ angular.module("app", [
                 name: "label",
                 url: "/label",
                 component: "label"
-            }, 
+            },
             {
                 name: "release",
                 url: "/release",
@@ -36,3 +37,9 @@ angular.module("app", [
     })
 
     ;
+
+function resources($scope, $resource) {
+
+    var resource = $resource("https://api.discogs.com/releases/249504");
+    
+};
