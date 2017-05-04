@@ -1,0 +1,25 @@
+{
+  "name": "wild-disco",
+  "version": "1.0.0",
+  "description": "hackaton wcs - the wilders three",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garciamarco33/Wild-Disco.git"
+  },
+  "author": "Thibault, Thomas, Marco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garciamarco33/Wild-Disco/issues"
+  },
+  "homepage": "https://github.com/garciamarco33/Wild-Disco#readme",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "angular-ui-router": "^1.0.0",
+    "materialize-css": "^0.98.2"
+  }
+}
