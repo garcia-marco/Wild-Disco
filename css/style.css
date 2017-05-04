@@ -7,3 +7,7 @@ html, body {
 
     overflow: hidden;
 }
+/* HEADER */
+header {
+  padding: 0;
+}
