@@ -11,4 +11,5 @@ angular.module("app")
 
 function Header() {
     this.links = ["home","artist","label","release"];
+    this.links = ["home","artist","label","release"]
 }
