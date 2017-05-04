@@ -14,17 +14,17 @@ angular.module("app", [
             },
             {
                 name: "artist",
-                url: "/artist",
+                url: "/artist/:id",
                 component: "artist"
             },
             {
                 name: "label",
-                url: "/label",
+                url: "/label/:id",
                 component: "label"
             },
             {
                 name: "release",
-                url: "/release",
+                url: "/release/:id",
                 component: "release"
             },
         ];
