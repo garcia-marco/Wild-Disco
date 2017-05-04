@@ -10,5 +10,5 @@ angular.module("app")
 ;
 
 function Footer() {
-    this.links = ["home","artist","label","release"]
+    this.footer = ["home","artist","label","release"];
 }
