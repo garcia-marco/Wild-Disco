@@ -1,1 +1,6 @@
-<div>{{$ctrl.header}}</div>
+<div ng-repeat="link in $ctrl.links">
+    <a  ui-sref="{{link}}"
+        ui-sref-active="active">
+        {{link}}
+    </a>
+</div>
