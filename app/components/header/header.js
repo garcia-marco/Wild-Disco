@@ -10,5 +10,6 @@ angular.module("app")
 ;
 
 function Header() {
+
     this.links = ["release","label","artist",];
 }
