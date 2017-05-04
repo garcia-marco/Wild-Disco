@@ -36,3 +36,7 @@ angular.module("app", [
     })
 
     ;
+
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+});
