@@ -7,3 +7,15 @@ html, body {
 
     overflow: hidden;
 }
+/* HEADER */
+header {
+  padding: 0;
+}
+h1 {
+  margin-left: 1em;
+  margin-top: 0.5em;
+  font-size: 1em;
+  }
+#nav-mobile li a {
+  text-transform: capitalize;
+}

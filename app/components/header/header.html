@@ -1,6 +1,11 @@
-<div ng-repeat="link in $ctrl.links">
-    <a  ui-sref="{{link}}"
-        ui-sref-active="active">
-        {{link}}
-    </a>
-</div>
+
+<nav>
+  <div class="nav-wrapper">
+  <a href="#" class="brand-logo"><h1>The Wilders 3</h1></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down" ng-repeat="link in $ctrl.links">
+      <li><a ui-sref="{{link}}"
+          ui-sref-active="active">{{link}}</a></li>
+    </ul>
+  </div>
+</nav>
+<div>{{$ctrl.header}}</div>

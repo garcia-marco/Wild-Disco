@@ -10,5 +10,4 @@ angular.module("app")
 ;
 
 function Content() {
-    this.content = "content here";
 }
