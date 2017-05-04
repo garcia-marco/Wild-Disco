@@ -1,3 +1,3 @@
-## Hackathon
+# Hackathon
 
-# Wild-Disco
+## Wild-Disco
