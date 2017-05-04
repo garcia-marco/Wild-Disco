@@ -7,15 +7,14 @@ angular.module("app")
         controller: Home
     })
 
-;
+    ;
 
 function Home($scope, $resource) {
     this.home = "Home";
     this.resource = getDiscogs($scope, $resource);
-    this.titre = this.resource.title;
-    this.test = this.titre.get();
+    this.getArtists = this.resource.get();
 }
 
 function getDiscogs($scope, $resource) {
-    return $resource("https://api.discogs.com/releases/249504");
+    return $resource("https://api.discogs.com/artists/:id", {id:791, key:'AhezeNpOGqMfsaWoHHJV', secret:'nhbZbFrJENBMOisxoKIYukdoggyRmFkF'});
 };
