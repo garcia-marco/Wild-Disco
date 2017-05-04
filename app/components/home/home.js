@@ -9,12 +9,13 @@ angular.module("app")
 
 ;
 
-function Home($resource, $scope) {
+function Home($scope, $resource) {
     this.home = "Home";
-    this.resource = getDiscogs($resource, $scope);
-    this.test = this.resource.get();
+    this.resource = getDiscogs($scope, $resource);
+    this.titre = this.resource.title;
+    this.test = this.titre.get();
 }
 
-function getDiscogs($resource, $scope) {
+function getDiscogs($scope, $resource) {
     return $resource("https://api.discogs.com/releases/249504");
 };
