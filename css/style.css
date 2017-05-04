@@ -9,6 +9,7 @@ html, body {
 }
 
 /* HEADER */
+
 header {
   padding: 0;
 }
@@ -20,7 +21,16 @@ h1 {
 #nav-mobile li a {
   text-transform: capitalize;
 }
+ul li a:hover {
+  background-color: teal !important;
+}
 
+/* CONTENT */
+.purCent {
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+}
 
 /* FOOTER */
 

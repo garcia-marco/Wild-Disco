@@ -1,3 +1,9 @@
-<img ng-src="{{$ctrl.getArtists.images[1].resource_url}}">
-<div>{{$ctrl.getArtists.name}}</div>
-<div>{{$ctrl.getArtists.label}}</div>
+<div class="row">
+    <div class="col offset-s1"></div>
+    <div ng-repeat="artist in $ctrl.artists">
+        <div class="col s2 purCent">
+            <img class="responsive-img" ng-src="{{artist.images[1].resource_url}}">
+            <div>{{artist.name}}</div>
+        </div>
+    </div>
+</div>

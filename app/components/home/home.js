@@ -10,11 +10,9 @@ angular.module("app")
     ;
 
 function Home($scope, $resource) {
-    this.home = "Home";
-    this.resource = getDiscogs($scope, $resource);
-    this.getArtists = this.resource.get();
-}
-
-function getDiscogs($scope, $resource) {
-    return $resource("https://api.discogs.com/artists/:id", {id:791, key:'AhezeNpOGqMfsaWoHHJV', secret:'nhbZbFrJENBMOisxoKIYukdoggyRmFkF'});
+    this.artistsId = [287377, 14014, 251595, 1419605, 791];
+    this.artists = [];
+    for (let i = 0, len = this.artistsId.length; i < len; i++) {
+        this.artists.push($resource('https://api.discogs.com/artists/:id', { id: this.artistsId[i], key: 'AhezeNpOGqMfsaWoHHJV', secret: 'nhbZbFrJENBMOisxoKIYukdoggyRmFkF' }).get())
+    }
 };
