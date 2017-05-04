@@ -4,11 +4,12 @@ angular.module("app")
 
     .component("home", {
         templateUrl: "app/components/home/home.html",
-        controller: home
+        controller: Home
     })
 
 ;
 
-function home() {
-    this.home = "home here";
+function Home($scope, $resource) {
+    this.home = "Home";
+    this.resource = $resource("https://api.discogs.com/releases/249504");
 }

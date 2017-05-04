@@ -4,6 +4,7 @@ angular.module("app", [
     // les dépendances externes
     "ui.router", "ngResource"
 ])
+    .controller('main', main)
 
     .config(function ($stateProvider, $urlRouterProvider) {
         var states = [
@@ -36,6 +37,12 @@ angular.module("app", [
     })
 
     ;
+
+function main($scope, $resource) {
+    this.test = "hello";
+    var resource = $resource("https://api.discogs.com/releases/249504");
+
+};
 
 $( document ).ready(function(){
   $(".button-collapse").sideNav();
