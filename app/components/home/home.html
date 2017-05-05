@@ -1,17 +1,22 @@
-<div class="row inLine">
+<div class="row inLine" ng-init="info=false">
     <div class="contain-me" ng-repeat="artist in $ctrl.artists">
-
-            <div class="purCent">
-                <img class="responsive-img" ng-src="{{ artist.images[0].resource_url }}">
-            </div>
-
-            <a ui-sref="artist({ id : artist.id })">{{ artist.name }}</a>
+        <div class="purCent" ng-mouseover="info=true">
+                <a ui-sref="artist({ id : artist.id })">
+                    <img class="responsive-img" ng-hide="info" ng-src="{{ artist.images[0].resource_url }}">
+                    <div class="caption center-align" ng-hide="info">
+                        <p>{{ artist.name }}</p>
+                    </div>
+                </a>
+        </div>
+        <div class="info" ng-show="info" ng-mouseleave="info=false">
+            <h4>{{ artist.name }}</h4>
             <h5>Derniers Morceaux</h5>
             <ul ng-repeat="release in $ctrl.getArtistReleases(artist.id).releases">
                 <li>
                     <a ui-sref="release({ id : release.id })"> {{ release.title }} </a>
                     <small><a ui-sref="release({ label : release.id })"></a> {{ release.label || "no label" }}</small>
                 </li>
-         </ul>
+            </ul>
+        </div>
     </div>
 </div>
