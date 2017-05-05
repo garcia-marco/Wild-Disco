@@ -13,6 +13,5 @@ function ArtistPage(Artist, LabelByArtist, $stateParams) {
     this.currentArtist = Artist.get({ id: currentArt });
     // console.log(this.currentArtist);
      let labels = $stateParams.label_id;
-     this.currentArtistLabels = LabelByArtist.get({ label_id:labels });
 
 }

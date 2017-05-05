@@ -1,13 +1,36 @@
-<div class="container">
-    <img class="responsive-img img-artiste col s6 m4 l4 xl4" ng-src="{{ $ctrl.currentArtist.images[0].resource_url }}">
-    <div class="content-page col s6 m8 l8 xl8">
-        <h2>{{$ctrl.currentArtist.name}}</h2>
-        <p>{{$ctrl.currentArtist.profile}}</p>
-        <h5>Derniers Morceaux</h5>
-
-        <h5>labels</h5>
-        <div ng-repeat="currentArtistLabel in $ctrl.currentArtistLabels(artist_id,)">
-          <p>{{.labels}}</p>
+<div class="contain-page">
+    <div class="contain-content">
+        <div class="row-artist">
+            <div class="contain-img">
+                <img class="responsive-img img-artiste" ng-src="{{ $ctrl.currentArtist.images[0].resource_url }}">
+            </div>
+            <div class="contain-txt">
+                <h2>{{$ctrl.currentArtist.name}}</h2>
+                <h5>{{$ctrl.currentArtist.namevariations}}</h5>
+                <p>{{$ctrl.currentArtist.profile}}</p>
+            </div>
+        </div>
+        <div class="row-artist">
+            <div class="column">
+                <h5>Morceaux</h5>
+                <div class="list">
+                    <ul ng-repeat="release in $ctrl.releases.releases">
+                        <li>
+                            <a ui-sref="release({ id : release.id })"> {{ release.title }} </a> <p>{{ release.year }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <h5>Labels</h5>
+                <div class="list">
+                    <ul ng-repeat="label in $ctrl.labels">
+                        <li>
+                            <a ui-sref="label({ id : label.id })"> {{ label.title }} </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
