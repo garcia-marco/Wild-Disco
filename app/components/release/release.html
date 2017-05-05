@@ -1,1 +1,32 @@
-<div>{{$ctrl.release}}</div>
+<div class="contain-page">
+    <div class="contain-content">
+        <div class="row-artist">
+            <div class="contain-img">
+                <img class="responsive-img img-artiste" ng-src="{{ $ctrl.currentRelease.images[0].resource_url }}">
+            </div>
+            <div class="contain-txt">
+                <h2>{{$ctrl.currentRelease.title}}</h2>
+                <div ng-repeat="artist in $ctrl.currentRelease.artists">
+                    <h5>{{artist.name}}</h5>
+                </div>
+                <h5>{{$ctrl.currentRelease.released_formatted}}</h5> Labels :
+                <div ng-repeat="label in $ctrl.currentRelease.labels">
+                     <a ui-sref="label({ id : label.id })"><h6> {{label.name}}</h6></a>
+                </div>
+            </div>
+        </div>
+        <div class="row-artist">
+            <div class="column-rel">
+                <h5>Morceaux</h5>
+                <div class="list">
+                    <ul ng-repeat="track in $ctrl.currentRelease.tracklist">
+                        <li>
+                            <a> {{track.title}} </a>
+                            <p>{{ track.duration }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

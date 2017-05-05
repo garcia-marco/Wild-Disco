@@ -10,5 +10,4 @@ angular.module("app")
 ;
 
 function Footer() {
-    this.footer = ["home","artist","label","release"];
 }
