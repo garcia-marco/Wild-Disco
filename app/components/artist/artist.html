@@ -1,8 +1,13 @@
-<div class="contain-page">
-    <img class="responsive-img img-artiste" ng-src="{{ $ctrl.currentArtist.images[0].resource_url }}">
-    <div class="content-page">
+<div class="container">
+    <img class="responsive-img img-artiste col s6 m4 l4 xl4" ng-src="{{ $ctrl.currentArtist.images[0].resource_url }}">
+    <div class="content-page col s6 m8 l8 xl8">
         <h2>{{$ctrl.currentArtist.name}}</h2>
         <p>{{$ctrl.currentArtist.profile}}</p>
         <h5>Derniers Morceaux</h5>
+
+        <h5>labels</h5>
+        <div ng-repeat="currentArtistLabel in $ctrl.currentArtistLabels(artist_id,)">
+          <p>{{.labels}}</p>
+        </div>
     </div>
 </div>

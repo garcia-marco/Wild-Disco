@@ -6,7 +6,7 @@ angular.module("app")
         return $resource('https://api.discogs.com/artists/:id', { id: 'osef', key: "SlpnWvilmgEBALOyuUUf", secret: "cLadqGZrWvmArSUIlUwhYflriPcszTAo" });
     })
     .factory("Label", function ($resource) {
-        return $resource('https://api.discogs.com/labels/:id', { id: 'osef', key: "SlpnWvilmgEBALOyuUUf", secret: "cLadqGZrWvmArSUIlUwhYflriPcszTAo" });
+        return $resource('https://api.discogs.com/labels/:id', { label_id: 'osef', key: "SlpnWvilmgEBALOyuUUf", secret: "cLadqGZrWvmArSUIlUwhYflriPcszTAo" });
     })
     .factory("ArtistReleases", function ($resource) {
         return $resource('https://api.discogs.com/artists/:id/releases', { id: 'osef', key: "CYxgKilzBewlWUCbRXtK", secret: "RzsDXknRYVrUtVYwtRWiCLdXqctGmpEZ" });

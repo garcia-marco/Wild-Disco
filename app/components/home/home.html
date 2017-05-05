@@ -1,6 +1,6 @@
 <div class="row inLine">
     <div class="contain-me" ng-repeat="artist in $ctrl.artists">
-        
+
             <div class="purCent">
                 <img class="responsive-img" ng-src="{{ artist.images[0].resource_url }}">
             </div>
@@ -10,7 +10,7 @@
             <ul ng-repeat="release in $ctrl.getArtistReleases(artist.id).releases">
                 <li>
                     <a ui-sref="release({ id : release.id })"> {{ release.title }} </a>
-                    <small> {{ release.label || "no label" }}</small>
+                    <small><a ui-sref="release({ label : release.id })"></a> {{ release.label || "no label" }}</small>
                 </li>
          </ul>
     </div>

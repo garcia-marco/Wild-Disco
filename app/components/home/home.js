@@ -36,7 +36,7 @@ function Home(Artist, LastArtistReleases, Label) {
         return this.artistsReleases[id];
     }
 
-    this.label = function (id) {
-        return Label.get({ id: id });
+    this.label = function (label_id) {
+        return Label.get({ label_id: id });
     }
 }
