@@ -12,7 +12,6 @@ function Home(Artist, LastArtistReleases, Label) {
     let artistsId = [287377, 14014, 251595, 1419605, 791];
 
     let artists = [];
-    let labels = [];
     let releases = [];
 
     angular.forEach(artistsId, function (Ids) {
@@ -36,7 +35,8 @@ function Home(Artist, LastArtistReleases, Label) {
         return this.artistsReleases[id];
     }
 
-    this.label = function (label_id) {
-        return Label.get({ label_id: id });
+    this.label = function (id) {
+        return Label.get({ id: id });
     }
+
 }

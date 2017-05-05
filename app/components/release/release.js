@@ -9,6 +9,8 @@ angular.module("app")
 
 ;
 
-function Release() {
-    this.release = "release here";
+function Release(Release, $stateParams) {
+
+    let currentRel = $stateParams.id;
+    this.currentRelease = Release.get({ id: currentRel });
 }

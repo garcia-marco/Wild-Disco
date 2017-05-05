@@ -16,4 +16,7 @@ angular.module("app")
     })
     .factory("LastArtistReleases", function ($resource) {
         return $resource('https://api.discogs.com/artists/:artist_id/releases', { artist_id: 'osef', sort: 'year', sort_order: 'desc', page: "1", per_page: "3", key: "AhezeNpOGqMfsaWoHHJV", secret: "nhbZbFrJENBMOisxoKIYukdoggyRmFkF" });
-    });
+    })
+    .factory("LabelReleases", function ($resource) {
+        return $resource('https://api.discogs.com/labels/:id/releases', { id: 'osef', key: "AhezeNpOGqMfsaWoHHJV", secret: "nhbZbFrJENBMOisxoKIYukdoggyRmFkF" });
+    })

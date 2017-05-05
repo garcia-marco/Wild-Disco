@@ -13,6 +13,4 @@ function ArtistPage(Artist, ArtistReleases, $stateParams) {
     this.currentArtist = Artist.get({ id: currentArt });
 
     this.releases = ArtistReleases.get({ id: currentArt });
-    this.releases = ArtistReleases.get({ id: currentArt });
-
 }
