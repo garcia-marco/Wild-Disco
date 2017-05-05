@@ -10,7 +10,7 @@ angular.module("app")
 function ArtistPage(Artist, $stateParams) {
 
     let currentArt = $stateParams.id;
-    this.currentArtist = Artist.get({id: currentArt});
-    console.log(this.currentArtist)
-    
+    this.currentArtist = Artist.get({ id: currentArt });
+    console.log(this.currentArtist);
+
 }
